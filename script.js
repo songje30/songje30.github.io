@@ -10,99 +10,84 @@ const dbData = {
             {name : 'iPhone', link : '#'},      //메뉴 이름, 링크
             {name : 'Watch', link : '#'},       //메뉴 이름, 링크
             {name : 'Music', link : '#'},       //메뉴 이름, 링크
-            {name : '고객지원', link : '#'}       //메뉴 이름, 링크  
         ]
     },
     searchLink : '#',   //돋보기 모양 클릭시 링크
     cartLink : '#',     //장바구니 링크
     infoMessage : '<a href="#">온라인으로 쇼핑</a>하고 무료 배송, 스페셜리스트 지원 등의 혜택을 받으세요.', //메뉴바 하단의 텍스트
     mainProducts : [    //메뉴바 하단의 상품목록 (최소 1개 이상 남겨두고 나머지 삭제 가능)
-        {
-            name : 'iPhone 12',                             //상품 제목
-            info : '스피드 그 이상의 스피드.',                    //상품 설명
-            text : '가격은 950,000원부터 (보상 판매 미적용)',       //가격 등의 상세정보
+    {
+        name : 'iPhone 15 Pro',
+        info : '도약의 시간.',
+        text : '1,550,000원부터 (보상 판매 미적용)',
+        pageLink : '#',
+        orderLink : '#',
+        fontColor : '#ffffff', 
+        linkColor : '#517cd1',
+        imgLink : 'https://www.apple.com/v/iphone-15-pro/c/images/meta/iphone-15-pro_overview__f8jz7aagka2q_og.png?202406030820'
+    },    
+    {
+            name : 'MacBook Pro',                             //상품 제목
+            info : '비교 불가 성능  시선 강탈 매력',                    //상품 설명
+            text : '2,390,000원부터 (보상 판매 미적용)',       //가격 등의 상세정보
             pageLink : '#',                                 //상품 페이지 이동 링크주소
             orderLink : '#',                                //구입 페이지 이동 링크주소
-            fontColor : '#000000',                          //제목, 텍스트 폰트 색상
+            fontColor : '#ffffff',                          //제목, 텍스트 폰트 색상
             linkColor : '#517cd1',                          //더알아보기 구입하기 링크 폰트 색상
-            imgLink : 'https://www.apple.com/kr/home/t/images/heroes/iphone-12/iphone_12_us__fo0stbby242m_large_2x.jpg'
+            imgLink : 'https://www.apple.com/v/macbook-pro/ak/images/overview/welcome/welcome_hero_endframe__66ipqm3o5gyu_large.jpg'
         },
-        {
-            name : 'iPhone 12 Pro',
-            info : '도약의 시간.',
-            text : '가격은 1,350,000원부터 (보상 판매 미적용)',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#ffffff', 
-            linkColor : '#517cd1',
-            imgLink : 'https://www.apple.com/v/home/t/images/heroes/iphone-12-pro/iphone_12_pro_us__e5oyysg4k0ya_large_2x.jpg'
-        },
+        
         {
             name : 'iPad Air',
-            info : '강력하다. 다채롭다. 경이롭다',
-            text : '가격은 690,000원부터',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#000000',        
-            linkColor : '#517cd1',  
-            imgLink : 'https://www.apple.com/v/home/t/images/heroes/ipad-air/hero__dvsxv8smkkgi_large_2x.jpg'
-        },
-    ],
-    subProducts : [
-        {
-            name : 'watch',
-            info : '건강의 미래, 이미 손목 위에.',
+            info : '강력하다. 다채롭다. 경이롭다.',
+            text : '1,499,000원부터',
             pageLink : '#',
             orderLink : '#',
             fontColor : '#ffffff',        
+            linkColor : '#517cd1',  
+            imgLink : 'https://www.apple.com/v/ipad-pro/ap/images/overview/hero/hero_endframe__sg50vzdd6sqm_large.jpg'
+        },
+        {
+            name : 'AirPods Max',
+            info : '귀가 열리는 듯한 소리',
+            text :'',
+            pageLink : '#',
+            orderLink : '#',
+            fontColor : '#000000',        
             linkColor : '#517cd1',       
-            imgLink : 'https://www.apple.com/kr/home/t/images/promos/watch-series-6/tile__cauwwcyyn9hy_large_2x.jpg'
+            imgLink : 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/airpods-max-select-silver-202011_FMT_WHH?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1604615276000'
         },
         {
-            name : 'watch',
-            info : 'Black Unity Collection을 소개합니다.',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#ffffff',
-            linkColor : '#517cd1',    
-            imgLink : 'https://www.apple.com/v/home/t/images/promos/watch-black-unity-collection/promo_watch_black_unity_collection__glt5v0ra46q2_large_2x.jpg'
-        },
-        {
-            name : 'MacBook Pro',
-            info : '프로 중의 프로',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#ffffff',
-            linkColor : '#517cd1',    
-            imgLink : 'https://www.apple.com/v/home/t/images/promos/macbook-pro-13/macbook_pro_13__koscrc0x6wam_large_2x.jpg'
-        },
-        {
-            name : 'MacBook Air',
-            info : 'Air의 흐름을 바꾸다.',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#ffffff',
-            linkColor : '#517cd1',    
-            imgLink : 'https://www.apple.com/v/home/t/images/promos/macbook-air/macbook_air__knzp0i282eyy_large_2x.jpg'
-        },
-        {
-            name : 'Apple 여의도',
-            info : '곧 만나요.',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#000000', 
-            linkColor : '#517cd1',     
-            imgLink : 'https://www.apple.com/kr/home/t/images/promo/promo_large_2x.jpg'
-        },
-        {
-            name : '대학 생활용 Mac',
-            info : '또는 iPad 구입하고 AirPods까지 덤으로.',
+            name : '<i class="fab fa-apple"></i>Watch Ultra 2',
+            info : '한 차원 높은 모험.',
+            text : '1,149,000원 부터',
             pageLink : '#',
             orderLink : '#',
             fontColor : '#000000',
             linkColor : '#517cd1',    
-            imgLink : 'https://www.apple.com/kr/home/t/images/promos/back-to-school/tile__cauwwcyyn9hy_large_2x.jpg'
+            imgLink : 'https://www.apple.com/newsroom/images/2023/09/apple-unveils-apple-watch-ultra-2/article/Apple-Watch-Ultra-2-double-tap-gesture-230912_big.jpg.large.jpg'
         },
+    ],
+    subProducts : [
+        
+        {
+            name : 'iPad Pro',
+            info : '',
+            pageLink : '#',
+            orderLink : '#',
+            fontColor : '#ffffff',
+            linkColor : '#517cd1',    
+            imgLink : 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/refurb-ipad-pro-12-wifi-spacegray-2021?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1674663706569'
+        },
+        {
+            name : 'iPhone 15',
+            info : '',
+            pageLink : '#',
+            orderLink : '#',
+            fontColor : '#000000',
+            linkColor : '#517cd1',    
+            imgLink : 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black_FMT_WHH?wid=1280&hei=492&fmt=p-jpg&qlt=80&.v=cHJOTXEwTU92OEtKVDV2cVB1R2FTSjlERndlRTljaUdZeHJGM3dlLzR2OXJ2ZmJPL0RPUUo3QVV2SDlVcFh6VGJWU3RPOURZS0RCaG1weXBRYytNTEZIMVU3blhIMm9GdXVFaFpISW1jUE4vd3djUElYUEl5ak9OVThyMUdieDArWkxUYUVnWmIvZXJSSnA5eXhkU1BBPT0=&traceId=1'
+        }
     ],
     //하단 이벤트 문구
     eventText : `
