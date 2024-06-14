@@ -1,11 +1,11 @@
 //Data SET : 소스 코드 잘 몰라도 결과창 띄워놓고 비교하면서 수정 (백업필)
 const dbData = {
     logo : '<i class="fab fa-apple"></i>',  //로고 Fontawesome 홈페이지에 가서 원하는 로고 고르고 소스 복붙.
-    mainLink : '#', //로고 클릭시 링크
+    mainLink : './index.html', //로고 클릭시 링크
     mainMenu :{
         name : '쇼핑 및 알아보기',  //메뉴 이름 : 홈페이지 하단의 세부 메뉴 타이틀
         list : [
-            {name : 'Mac', link : '#'},         //메뉴 이름, 링크
+            {name : 'Mac', link : '/Mac.html'},         //메뉴 이름, 링크
             {name : 'iPad', link : '#'},        //메뉴 이름, 링크
             {name : 'iPhone', link : '#'},      //메뉴 이름, 링크
             {name : 'Watch', link : '#'},       //메뉴 이름, 링크
@@ -20,7 +20,7 @@ const dbData = {
         name : 'iPhone 15 Pro',
         info : '도약의 시간.',
         text : '1,550,000원부터 (보상 판매 미적용)',
-        pageLink : '#',
+        pageLink : './MacMookPro.html',
         orderLink : '#',
         fontColor : '#ffffff', 
         linkColor : '#517cd1',
@@ -30,7 +30,7 @@ const dbData = {
             name : 'MacBook Pro',                             //상품 제목
             info : '비교 불가 성능  시선 강탈 매력',                    //상품 설명
             text : '2,390,000원부터 (보상 판매 미적용)',       //가격 등의 상세정보
-            pageLink : '#',                                 //상품 페이지 이동 링크주소
+            pageLink : 'js/script.js',                                 //상품 페이지 이동 링크주소
             orderLink : '#',                                //구입 페이지 이동 링크주소
             fontColor : '#ffffff',                          //제목, 텍스트 폰트 색상
             linkColor : '#517cd1',                          //더알아보기 구입하기 링크 폰트 색상
@@ -65,7 +65,7 @@ const dbData = {
             orderLink : '#',
             fontColor : '#000000',
             linkColor : '#517cd1',    
-            imgLink : 'https://www.apple.com/newsroom/images/2023/09/apple-unveils-apple-watch-ultra-2/article/Apple-Watch-Ultra-2-double-tap-gesture-230912_big.jpg.large.jpg'
+            imgLink : 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MQE93_VW_34FR+watch-49-titanium-ultra2_VW_34FR+watch-face-49-ocean-ultra2_VW_34FR_GEO_KR?wid=5120&hei=3280&bgc=fafafa&trim=1&fmt=p-jpg&qlt=80&.v=VEt0Rkk1TGVZeSs2bXpncmJlRHRWUHZ4OU1ucmxYekw5aGF6a2ZZcG9hazdPN2hFakIxbjdEcTdvSm41NlVxWjY4QUVCdUdBMlBPcFgrL3RBcVB1cmY5akxmSjBzTThIaWphQnAvU3pXTzBzUWxJVGRZSG0zSzBCSWpnNDV1UWJ2S1B4dHJnZWVOenUzMmROdk9lOEdvSk43K25VYm5JaE5XMFJ6MEt5SVUydE13ZlhvMEpDZW1JRkhPN0RCZ0xWV1A4WkJQQ3BvYXllL2FBdjdLS29NZz09'
         },
     ],
     subProducts : [
