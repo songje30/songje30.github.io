@@ -219,9 +219,9 @@ const mainCollection = document.createElement('section');
             <video src="https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/highlights-chips/large.mp4"
                 autoplay muted loop></video
             </div>
-            <div style="text-align: left; background-color:black; padding: 40px 0px; border-radius: 20px;">
-            <h1 style="color: white; margin-left: 40px;">타의 추종을 불허하는 프로 노트북</h1>
-            <h1 style="color: white; margin-left: 40px;">매력적인 새 컬러 스페이스 블랙.</h1>
+            <div style="text-align: right; background-color:black; padding: 40px 0px; border-radius: 20px;">
+            <h1 style="color: white; margin-right: 40px;">타의 추종을 불허하는 프로 노트북</h1>
+            <h1 style="color: white; margin-right: 40px;">매력적인 새 컬러 스페이스 블랙.</h1>
             <video src="https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/highlights-connectivity/large.mp4"
                 autoplay muted loop></video
             </div>
