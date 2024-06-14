@@ -16,7 +16,7 @@ const dbData = {
     product_Menu :{
         name : '쇼핑 및 알아보기',  //메뉴 이름 : 홈페이지 하단의 세부 메뉴 타이틀
         list : [
-            {name : '1', link : '/Mac.html'},         //메뉴 이름, 링크
+            {name : '11', link : '/Mac.html'},         //메뉴 이름, 링크
             {name : 'i', link : '#'},        //메뉴 이름, 링크
             {name : '3', link : '#'},      //메뉴 이름, 링크
             {name : '4', link : '#'},       //메뉴 이름, 링크
