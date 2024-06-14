@@ -212,20 +212,36 @@ const mainCollection = document.createElement('section');
                     <span style="font-size: 30px; ">₩2,390,000부터</span>
                 </p>
                 <br>
-            </div>
+            </div">
+            <div>
             <div style="text-align: left; background-color:black; padding: 40px 0px; border-radius: 20px;">
             <h1 style="color: white; margin-left: 40px;">이제까지 개인용 컴퓨터에</h1>
             <h1 style="color: white; margin-left: 40px;">탑제된 칩들 중 가장 앞선 칩.</h1>
             <video src="https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/highlights-chips/large.mp4"
                 autoplay muted loop></video
             </div>
-            <div style="text-align: right; background-color:black; padding: 40px 0px; border-radius: 20px;">
+            <div style="text-align: right; background-color:black;">
             <h1 style="color: white; margin-right: 40px;">타의 추종을 불허하는 프로 노트북</h1>
             <h1 style="color: white; margin-right: 40px;">매력적인 새 컬러 스페이스 블랙.</h1>
             <video src="https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/highlights-connectivity/large.mp4"
                 autoplay muted loop></video
             </div>
-            
+            </div>
+            <div style="background-color: ; text-align: center;">
+                <nobr><h1 style="width: auto; font-size:50px; color: gray; margin-right:50%">본격적으로 탐구해 보기.</h1></nobr>
+                <br><br><br><br><br><br><br><br><br>
+                <nobr><h1 style="width: auto; font-size:80px; color: white; margin-right:">세 발짝 성큼 앞서다.</h1></nobr>
+                <br><br>
+                <div align="center" style=" font-size:21px; color: gray; text-align:left; margin-left:25%">
+                    <span>MacBookPro가 M3, M3 Pro, M3 Max 칩과 함께 훌쩍 도약합니다.</span><br>
+                    <span style="color: white;">3나노미터 기술</span>로 제작된 데다 <span style="color: white;">완전히새로운 GPU 아키텍처</span>
+                    까지 갖춘 M3<br>
+                    시리즈는 이제껏 개발된 PC용 칩들 중 가장 앞선 칩입니다. 세가지 모두 <span style="color: white;">더욱더<br> 
+                    프로다운 성능과 역량</span>을 뿜어내죠.
+                    </p>
+                </div
+                <img src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/mx__7nkrkdxhdzma_large.jpg" />
+            </div>
         `;
         mainCollectionUl.append(newLi);
     });
