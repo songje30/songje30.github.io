@@ -1,7 +1,7 @@
 //Data SET : 소스 코드 잘 몰라도 결과창 띄워놓고 비교하면서 수정 (백업필)
 const dbData = {
     logo : '<i class="fab fa-apple"></i>',  //로고 Fontawesome 홈페이지에 가서 원하는 로고 고르고 소스 복붙.
-    mainLink : './index.html', //로고 클릭시 링크
+    mainLink : 'index.html', //로고 클릭시 링크
     mainMenu :{
         name : '쇼핑 및 알아보기',  //메뉴 이름 : 홈페이지 하단의 세부 메뉴 타이틀
         list : [
@@ -26,7 +26,7 @@ const dbData = {
     },
     searchLink : '#',   //돋보기 모양 클릭시 링크
     cartLink : '#',     //장바구니 링크
-    infoMessage : '<a href="#">온라인으로 쇼핑</a>하고 무료 배송, 스페셜리스트 지원 등의 혜택을 받으세요.', //메뉴바 하단의 텍스트
+    infoMessage : '', //메뉴바 하단의 텍스트
     mainProducts : [    //메뉴바 하단의 상품목록 (최소 1개 이상 남겨두고 나머지 삭제 가능)
         {
             name : 'MacBook Pro',                             //상품 제목
@@ -34,29 +34,9 @@ const dbData = {
             text : '2,390,000원부터 (보상 판매 미적용)',       //가격 등의 상세정보
             pageLink : 'MacBookPro.html',                                 //상품 페이지 이동 링크주소
             orderLink : '#',                                //구입 페이지 이동 링크주소
-            fontColor : '#ffffff',                          //제목, 텍스트 폰트 색상
+            fontColor : '#000000',                          //제목, 텍스트 폰트 색상
             linkColor : '#517cd1',                          //더알아보기 구입하기 링크 폰트 색상
-            imgLink : 'https://www.apple.com/v/macbook-pro/ak/images/overview/welcome/welcome_hero_endframe__66ipqm3o5gyu_large.jpg'
-        },
-        {
-            name : 'MacBook Air',
-            info : '날렵하게. 강력하게. M3답게.',
-            text : '1,499,000원부터',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#ffffff',        
-            linkColor : '#517cd1',  
-            imgLink : 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbookair-og-202402?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1707414684423'
-        },
-        {
-            name : 'iMac',
-            info : '이젠 더 파워풀. 여전히 컬러풀.',
-            text :'',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#000000',        
-            linkColor : '#517cd1',       
-            imgLink : 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/imac-24-og-202310?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1697142273063'
+            imgLink : 'https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/welcome-hero/large.mp4'
         },
     ],
     subProducts : [
@@ -219,13 +199,33 @@ const mainCollection = document.createElement('section');
         newLi.className = 'product';
         newLi.style = `background : url('${product.imgLink}') center center/ cover no-repeat;`;
         newLi.innerHTML += `
-            <h4 style="color:${product.fontColor}">${product.name}</h4>
-            <h5 style="color:${product.fontColor}">${product.info}</h5>
-            <p style="color:${product.fontColor}">${product.text}</p>
-            <div class="links">
-            <a href="${product.pageLink}" style="color:${product.linkColor}">더 알아보기></a>
-            <a href="${product.orderLink}" style="color:${product.linkColor}">구입하기></a>
+            <div>
+                <video src="https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/welcome-hero/large.mp4"
+                autoplay muted></video>
             </div>
+            <br>
+            <div style="text-align: center;">
+                <a href="" style="background-color: #0071e3; padding: 11px 41px; border-radius: 20px; text-decoration: none; color: white;">구입하기</a>
+			    </a>
+                <br><br><br>
+                <p align="center">
+                    <span style="font-size: 30px; ">₩2,390,000부터</span>
+                </p>
+                <br>
+            </div>
+            <div style="text-align: left; background-color:black; padding: 40px 0px; border-radius: 20px;">
+            <h1 style="color: white; margin-left: 40px;">이제까지 개인용 컴퓨터에</h1>
+            <h1 style="color: white; margin-left: 40px;">탑제된 칩들 중 가장 앞선 칩.</h1>
+            <video src="https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/highlights-chips/large.mp4"
+                autoplay muted loop></video
+            </div>
+            <div style="text-align: right; background-color:black; padding: 40px 0px; border-radius: 20px;">
+            <h1 style="color: white; margin-right: 40px;">타의 추종을 불허하는 프로 노트북</h1>
+            <h1 style="color: white; margin-right: 40px;">매력적인 새 컬러 스페이스 블랙.</h1>
+            <video src="https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/highlights-connectivity/large.mp4"
+                autoplay muted loop></video
+            </div>
+            
         `;
         mainCollectionUl.append(newLi);
     });
@@ -397,7 +397,7 @@ const footMenu = document.createElement('section');
 }
 
 //Append Childs
-body.append(header,shopInfo,mainCollection,eventElement,footMenu);
+body.append(header,mainCollection,eventElement,footMenu);
 
 //FontAwesome 추가
 const fontawesome = document.createElement('script');
