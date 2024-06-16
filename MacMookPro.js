@@ -230,18 +230,67 @@ const mainCollection = document.createElement('section');
             <div style="background-color: ; text-align: center;">
                 <nobr><h1 style="width: auto; font-size:50px; color: gray; margin-right:50%">본격적으로 탐구해 보기.</h1></nobr>
                 <br><br><br><br><br><br><br><br><br>
-                <nobr><h1 style="width: auto; font-size:80px; color: white; margin-right:">세 발짝 성큼 앞서다.</h1></nobr>
+                <nobr><h1 style="font-size:80px; color: white; margin-left: ;">세 발짝 성큼 앞서다.</h1></nobr>
                 <br><br>
-                <div align="center" style=" font-size:21px; color: gray; text-align:left; margin-left:25%">
+                <div align="center" style=" font-size:21px; color: gray; text-align:left; margin-left:22%">
                     <span>MacBookPro가 M3, M3 Pro, M3 Max 칩과 함께 훌쩍 도약합니다.</span><br>
                     <span style="color: white;">3나노미터 기술</span>로 제작된 데다 <span style="color: white;">완전히새로운 GPU 아키텍처</span>
                     까지 갖춘 M3<br>
                     시리즈는 이제껏 개발된 PC용 칩들 중 가장 앞선 칩입니다. 세가지 모두 <span style="color: white;">더욱더<br> 
                     프로다운 성능과 역량</span>을 뿜어내죠.
                     </p>
-                </div
-                <img src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/mx__7nkrkdxhdzma_large.jpg" />
+                </div>
+                <div style="display:flex; justify-content:center;">
+                    <div style="text-align:left;">
+                        <img style="padding: 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/mx__7nkrkdxhdzma_large.jpg" />
+                        <h1 style="color:#43b9b9; padding: 50px 60px;  ">8코어 <br>CPU</h1>
+                        <h1 style="color:#43b9b9; padding: 50px 60px; ">10코어 <br>GPU</h1>
+                        <h1 style="color:#43b9b9; padding: 50px 60px; ">최대 24GB<br>통합 메모리</h1>
+                    </div>
+                    <div style= "text-align:left;">
+                        <img style="padding: 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/mx_pro__4183istr5f6u_large.jpg" />
+                        <h1 style="color: #2997ff; padding: 50px 60px; ">12코어 <br>CPU</h1>
+                        <h1 style="color: #2997ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
+                        <h1 style="color: #2997ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
+                    </div>
+                    <div style= "text-align:left;">
+                        <img style="padding: 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/mx_max__fbgblbhbf6ai_large.jpg" />
+                        <h1 style="color:#a972ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
+                        <h1 style="color:#a972ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
+                        <h1 style="color:#a972ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
+                    </div>
+                </div>
             </div>
+            <div style="background-color: #161617; text-align: center;">
+                <br><br><br><br><br><br><br><br><br>
+                <nobr><h1 style="font-size:80px; color: #f5f5f7; margin-left: ;">자신에게 맞는 MacBook Pro는?</h1></nobr>
+                <br><br>
+                <div style="display:flex; justify-content:center;">
+                    <div style="text-align:left;">
+                        <h1 style="color:#f5f5f7; padding: 0px 60px;  ">MacBook Pro 14</h1><br>
+                        <h1 style="color:#78787d; padding: 0px 60px;">M3칩</h1>
+                        <img style="padding: 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/model_mbp_14_m3__dyengvhazxme_medium.jpg" />
+                        <h1 style="color:#43b9b9; padding: 50px 60px;  ">8코어 <br>CPU</h1>
+                        <h1 style="color:#43b9b9; padding: 50px 60px; ">10코어 <br>GPU</h1>
+                        <h1 style="color:#43b9b9; padding: 50px 60px; ">최대 24GB<br>통합 메모리</h1>
+                    </div>
+                    <div style= "text-align:left;">
+                    <h1 style="color:#f5f5f7; padding: 0px 60px;  ">MacBook Pro 14</h1><br>
+                        <h1 style="color:#78787d; padding: 0px 60px;">M3 Pro 또는 M3 Max칩</h1>
+                        <img style="padding: 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/model_mbp_14_m3_pro_max__0ffc9mzs70i6_medium.jpg" />
+                        <h1 style="color: #2997ff; padding: 50px 60px; ">12코어 <br>CPU</h1>
+                        <h1 style="color: #2997ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
+                        <h1 style="color: #2997ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
+                    </div>
+                    <div style= "text-align:left;">
+                    <h1 style="color:#f5f5f7; padding: 0px 60px;  ">MacBook Pro 16</h1><br>
+                        <h1 style="color:#78787d; padding: 0px 60px;">M3 Pro 또는 M3 Max칩</h1>
+                        <img style="padding: 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/model_mbp_14_m3_pro_max__0ffc9mzs70i6_medium.jpg" />
+                        <h1 style="color:#a972ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
+                        <h1 style="color:#a972ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
+                        <h1 style="color:#a972ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
+                    </div>
+                </div>
         `;
         mainCollectionUl.append(newLi);
     });
