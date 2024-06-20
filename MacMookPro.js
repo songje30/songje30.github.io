@@ -1,15 +1,15 @@
 //Data SET : 소스 코드 잘 몰라도 결과창 띄워놓고 비교하면서 수정 (백업필)
 const dbData = {
     logo : '<i class="fab fa-apple"></i>',  //로고 Fontawesome 홈페이지에 가서 원하는 로고 고르고 소스 복붙.
-    mainLink : 'index.html', //로고 클릭시 링크
+    mainLink : '/index.html', //로고 클릭시 링크
     mainMenu :{
         name : '쇼핑 및 알아보기',  //메뉴 이름 : 홈페이지 하단의 세부 메뉴 타이틀
         list : [
             {name : 'Mac', link : '/Mac.html'},         //메뉴 이름, 링크
-            {name : 'iPad', link : '#'},        //메뉴 이름, 링크
-            {name : 'iPhone', link : '#'},      //메뉴 이름, 링크
-            {name : 'Watch', link : '#'},       //메뉴 이름, 링크
-            {name : 'Music', link : '#'},       //메뉴 이름, 링크
+            {name : 'iPad', link : '/iPad.html'},        //메뉴 이름, 링크
+            {name : 'iPhone', link : '/iPhone.html'},      //메뉴 이름, 링크
+            {name : 'Watch', link : 'Watch.html'},       //메뉴 이름, 링크
+            {name : 'AirPads', link : '/AirPad.html'},//메뉴 이름, 링크
         ]
         
     },
@@ -214,20 +214,17 @@ const mainCollection = document.createElement('section');
                 <br>
             </div">
             <div>
-            <div style="text-align: left; background-color:black; padding: 40px 0px; border-radius: 20px;">
+            <div style="text-align: left; background-color:black; padding: 40px 0px; border-radius: 0px;">
             <h1 style="color: white; margin-left: 40px;">이제까지 개인용 컴퓨터에</h1>
             <h1 style="color: white; margin-left: 40px;">탑제된 칩들 중 가장 앞선 칩.</h1>
             <video src="https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/highlights-chips/large.mp4"
-                autoplay muted loop></video
-            </div>
-            <div style="text-align: right; background-color:black;">
-            <h1 style="color: white; margin-right: 40px;">타의 추종을 불허하는 프로 노트북</h1>
-            <h1 style="color: white; margin-right: 40px;">매력적인 새 컬러 스페이스 블랙.</h1>
+                autoplay muted loop></video>
+                <h1 style="color: white; margin-left: 65%;">타의 추종을 불허하는 프로 노트북</h1>
+            <h1 style="color: white; margin-left: 65%;">매력적인 새 컬러 스페이스 블랙.</h1>
             <video src="https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/highlights-connectivity/large.mp4"
-                autoplay muted loop></video
-            </div>
-            </div>
-            <div style="background-color: ; text-align: center;">
+                autoplay muted loop></video>
+                </div>
+            <div style="background-color: black ; text-align: center;">
                 <nobr><h1 style="width: auto; font-size:50px; color: gray; margin-right:50%">본격적으로 탐구해 보기.</h1></nobr>
                 <br><br><br><br><br><br><br><br><br>
                 <nobr><h1 style="font-size:80px; color: white; margin-left: ;">세 발짝 성큼 앞서다.</h1></nobr>
@@ -303,6 +300,7 @@ const mainCollection = document.createElement('section');
                         <h1 style="color:#77777c; padding: 50px 60px; ">배터리 사용 시간<br>최대 22시간</h1></h1>
                     </div>
                 </div>
+            </div>
                 <a href="" style=" padding: 0px 50px; background-color: #0071e3; padding: 11px 41px; border-radius: 20px; text-decoration: none; color: white;">구입하기</a>
         `;
         mainCollectionUl.append(newLi);

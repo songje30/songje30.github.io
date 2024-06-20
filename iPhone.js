@@ -1,93 +1,57 @@
 //Data SET : 소스 코드 잘 몰라도 결과창 띄워놓고 비교하면서 수정 (백업필)
 const dbData = {
     logo : '<i class="fab fa-apple"></i>',  //로고 Fontawesome 홈페이지에 가서 원하는 로고 고르고 소스 복붙.
-    mainLink : '#', //로고 클릭시 링크
+    mainLink : 'index.html', //로고 클릭시 링크
     mainMenu :{
         name : '쇼핑 및 알아보기',  //메뉴 이름 : 홈페이지 하단의 세부 메뉴 타이틀
         list : [
-            {name : 'Mac', link : '#'},         //메뉴 이름, 링크
-            {name : 'iPad', link : '#'},        //메뉴 이름, 링크
-            {name : 'iPhone', link : '#'},      //메뉴 이름, 링크
-            {name : 'Watch', link : '#'},       //메뉴 이름, 링크
-            {name : 'Music', link : '#'},       //메뉴 이름, 링크
+            {name : 'Mac', link : '/Mac.html'},         //메뉴 이름, 링크
+            {name : 'iPad', link : '/iPad.html'},        //메뉴 이름, 링크
+            {name : 'iPhone', link : '/iPhone.html'},      //메뉴 이름, 링크
+            {name : 'Watch', link : 'Watch.html'},       //메뉴 이름, 링크
+            {name : 'AirPads', link : '/AirPad.html'},        //메뉴 이름, 링크
         ]
+        
+    },
+    product_Menu :{
+        name : '쇼핑 및 알아보기',  //메뉴 이름 : 홈페이지 하단의 세부 메뉴 타이틀
+        list : [
+            {name : '1', link : '/Mac.html'},         //메뉴 이름, 링크
+            {name : 'i', link : '#'},        //메뉴 이름, 링크
+            {name : '3', link : '#'},      //메뉴 이름, 링크
+            {name : '4', link : '#'},       //메뉴 이름, 링크
+            {name : 'M', link : '#'},       //메뉴 이름, 링크
+        ]
+        
     },
     searchLink : '#',   //돋보기 모양 클릭시 링크
     cartLink : '#',     //장바구니 링크
     infoMessage : '<a href="#">온라인으로 쇼핑</a>하고 무료 배송, 스페셜리스트 지원 등의 혜택을 받으세요.', //메뉴바 하단의 텍스트
     mainProducts : [    //메뉴바 하단의 상품목록 (최소 1개 이상 남겨두고 나머지 삭제 가능)
-    {
-        name : 'iPhone 15 Pro',
-        info : '도약의 시간.',
-        text : '1,550,000원부터 (보상 판매 미적용)',
-        pageLink : '#',
-        orderLink : '#',
-        fontColor : '#ffffff', 
-        linkColor : '#517cd1',
-        imgLink : 'https://www.apple.com/v/iphone-15-pro/c/images/meta/iphone-15-pro_overview__f8jz7aagka2q_og.png?202406030820'
-    },    
-    {
-            name : 'MacBook Pro',                             //상품 제목
-            info : '비교 불가 성능  시선 강탈 매력',                    //상품 설명
-            text : '2,390,000원부터 (보상 판매 미적용)',       //가격 등의 상세정보
-            pageLink : '#',                                 //상품 페이지 이동 링크주소
+        {
+            name : 'iPhone15 Pro',                             //상품 제목
+            info : '',                    //상품 설명
+            text : '1,550,000원부터 (보상 판매 미적용)',       //가격 등의 상세정보
+            pageLink : 'MacBookPro.html',                                 //상품 페이지 이동 링크주소
             orderLink : '#',                                //구입 페이지 이동 링크주소
             fontColor : '#ffffff',                          //제목, 텍스트 폰트 색상
             linkColor : '#517cd1',                          //더알아보기 구입하기 링크 폰트 색상
-            imgLink : 'https://www.apple.com/v/macbook-pro/ak/images/overview/welcome/welcome_hero_endframe__66ipqm3o5gyu_large.jpg'
+            imgLink : 'https://www.apple.com/kr/iphone-15-pro/c/images/overview/welcome/hero_endframe__ov6ewwmbhiqq_medium.jpg'
         },
-        
         {
-            name : 'iPad Air',
-            info : '강력하다. 다채롭다. 경이롭다.',
-            text : '1,499,000원부터',
-            pageLink : '#',
+            name : 'iPhone15',
+            info : '사랑받기 위해 디자인 되다.',
+            text : '1,250,000원부터',
+            pageLink : 'MacBookAir.html',
             orderLink : '#',
-            fontColor : '#ffffff',        
+            fontColor : '#222222',        
             linkColor : '#517cd1',  
-            imgLink : 'https://www.apple.com/v/ipad-pro/ap/images/overview/hero/hero_endframe__sg50vzdd6sqm_large.jpg'
-        },
-        {
-            name : 'AirPods Max',
-            info : '귀가 열리는 듯한 소리',
-            text :'',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#000000',        
-            linkColor : '#517cd1',       
-            imgLink : 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/airpods-max-select-silver-202011_FMT_WHH?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1604615276000'
-        },
-        {
-            name : '<i class="fab fa-apple"></i>Watch Ultra 2',
-            info : '한 차원 높은 모험.',
-            text : '1,149,000원 부터',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#000000',
-            linkColor : '#517cd1',    
-            imgLink : 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MQE93_VW_34FR+watch-49-titanium-ultra2_VW_34FR+watch-face-49-ocean-ultra2_VW_34FR_GEO_KR?wid=5120&hei=3280&bgc=fafafa&trim=1&fmt=p-jpg&qlt=80&.v=VEt0Rkk1TGVZeSs2bXpncmJlRHRWUHZ4OU1ucmxYekw5aGF6a2ZZcG9hazdPN2hFakIxbjdEcTdvSm41NlVxWjY4QUVCdUdBMlBPcFgrL3RBcVB1cmY5akxmSjBzTThIaWphQnAvU3pXTzBzUWxJVGRZSG0zSzBCSWpnNDV1UWJ2S1B4dHJnZWVOenUzMmROdk9lOEdvSk43K25VYm5JaE5XMFJ6MEt5SVUydE13ZlhvMEpDZW1JRkhPN0RCZ0xWV1A4WkJQQ3BvYXllL2FBdjdLS29NZz09'
+            imgLink : 'https://www.apple.com/kr/iphone/home/bu/images/meta/iphone__ky2k6x5u6vue_og.png'
         },
     ],
     subProducts : [
         
-        {
-            name : 'iPad Pro',
-            info : '',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#ffffff',
-            linkColor : '#517cd1',    
-            imgLink : 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/refurb-ipad-pro-12-wifi-spacegray-2021?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1674663706569'
-        },
-        {
-            name : 'iPhone 15',
-            info : '',
-            pageLink : '#',
-            orderLink : '#',
-            fontColor : '#000000',
-            linkColor : '#517cd1',    
-            imgLink : 'https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black_FMT_WHH?wid=1280&hei=492&fmt=p-jpg&qlt=80&.v=cHJOTXEwTU92OEtKVDV2cVB1R2FTSjlERndlRTljaUdZeHJGM3dlLzR2OXJ2ZmJPL0RPUUo3QVV2SDlVcFh6VGJWU3RPOURZS0RCaG1weXBRYytNTEZIMVU3blhIMm9GdXVFaFpISW1jUE4vd3djUElYUEl5ak9OVThyMUdieDArWkxUYUVnWmIvZXJSSnA5eXhkU1BBPT0=&traceId=1'
-        }
+        
     ],
     //하단 이벤트 문구
     eventText : `
@@ -207,9 +171,14 @@ const header = document.createElement('header');
         <div class="logo-icon"><a href="#">${dbData.logo}</a></div>
     `;
     const header_menuList = document.createElement('ul');
+    const header_product_menuList = document.createElement('ul');
     header_menuList.className = 'menu-list';
+    header_product_menuList.className = 'product-menu-list';
     dbData.mainMenu.list.forEach(menu => {
         header_menuList.innerHTML += `<li class="menu-item"><a href="${menu.link}">${menu.name}</a></li>`;
+    });
+    dbData.product_Menu.list.forEach(pmenu => {
+        header_product_menuList.innerHTML += `<li class="product-menu-item"><a href="${pmenu.link}">${pmenu.name}</a></li>`;
     });
     const header_icons = document.createElement('ul');
     header_icons.className = 'icons';
@@ -418,7 +387,7 @@ const footMenu = document.createElement('section');
 }
 
 //Append Childs
-body.append(header,shopInfo,mainCollection,subCollection,eventElement,footMenu);
+body.append(header,shopInfo,mainCollection,eventElement,footMenu);
 
 //FontAwesome 추가
 const fontawesome = document.createElement('script');

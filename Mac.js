@@ -6,10 +6,10 @@ const dbData = {
         name : '쇼핑 및 알아보기',  //메뉴 이름 : 홈페이지 하단의 세부 메뉴 타이틀
         list : [
             {name : 'Mac', link : '/Mac.html'},         //메뉴 이름, 링크
-            {name : 'iPad', link : '#'},        //메뉴 이름, 링크
-            {name : 'iPhone', link : '#'},      //메뉴 이름, 링크
-            {name : 'Watch', link : '#'},       //메뉴 이름, 링크
-            {name : 'Music', link : '#'},       //메뉴 이름, 링크
+            {name : 'iPad', link : '/iPad.html'},        //메뉴 이름, 링크
+            {name : 'iPhone', link : '/iPhone.html'},      //메뉴 이름, 링크
+            {name : 'Watch', link : 'Watch.html'},       //메뉴 이름, 링크
+            {name : 'AirPads', link : '/AirPad.html'},         //메뉴 이름, 링크
         ]
         
     },

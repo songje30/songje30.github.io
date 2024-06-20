@@ -6,10 +6,10 @@ const dbData = {
         name : '쇼핑 및 알아보기',  //메뉴 이름 : 홈페이지 하단의 세부 메뉴 타이틀
         list : [
             {name : 'Mac', link : '/Mac.html'},         //메뉴 이름, 링크
-            {name : 'iPad', link : '#'},        //메뉴 이름, 링크
-            {name : 'iPhone', link : '#'},      //메뉴 이름, 링크
-            {name : 'Watch', link : '#'},       //메뉴 이름, 링크
-            {name : 'Music', link : '#'},       //메뉴 이름, 링크
+            {name : 'iPad', link : '/iPad.html'},        //메뉴 이름, 링크
+            {name : 'iPhone', link : '/iPhone.html'},      //메뉴 이름, 링크
+            {name : 'Watch', link : 'Watch.html'},       //메뉴 이름, 링크
+            {name : 'AirPads', link : '/AirPad.html'},        //메뉴 이름, 링크
         ]
         
     },
@@ -218,97 +218,31 @@ const mainCollection = document.createElement('section');
                 <span style="font-size: 19px;"><b>M2 칩 탑재 MacBook Air ₩1,390,000부터</span>
                 </p>
             </div>
-            <div>
-            <div style="text-align: left; background-color:black; padding: 40px 0px; border-radius: 20px;">
-            <h1 style="color: white; margin-left: 40px;">이제까지 개인용 컴퓨터에</h1>
-            <h1 style="color: white; margin-left: 40px;">탑제된 칩들 중 가장 앞선 칩.</h1>
-            <video src="https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/highlights-chips/large.mp4"
-                autoplay muted loop></video
-            </div>
-            <div style="text-align: right; background-color:black;">
-            <h1 style="color: white; margin-right: 40px;">타의 추종을 불허하는 프로 노트북</h1>
-            <h1 style="color: white; margin-right: 40px;">매력적인 새 컬러 스페이스 블랙.</h1>
-            <video src="https://www.apple.com/105/media/us/macbook-pro/2023/232a2dbf-5898-4fd1-a350-6a7c5c2e31c9/anim/highlights-connectivity/large.mp4"
-                autoplay muted loop></video
-            </div>
-            </div>
-            <div style="background-color: ; text-align: center;">
-                <nobr><h1 style="width: auto; font-size:50px; color: gray; margin-right:50%">본격적으로 탐구해 보기.</h1></nobr>
-                <br><br><br><br><br><br><br><br><br>
-                <nobr><h1 style="font-size:80px; color: white; margin-left: ;">세 발짝 성큼 앞서다.</h1></nobr>
-                <br><br>
-                <div align="center" style=" font-size:21px; color: gray; text-align:left; margin-left:22%">
-                    <span>MacBookPro가 M3, M3 Pro, M3 Max 칩과 함께 훌쩍 도약합니다.</span><br>
-                    <span style="color: white;">3나노미터 기술</span>로 제작된 데다 <span style="color: white;">완전히새로운 GPU 아키텍처</span>
-                    까지 갖춘 M3<br>
-                    시리즈는 이제껏 개발된 PC용 칩들 중 가장 앞선 칩입니다. 세가지 모두 <span style="color: white;">더욱더<br> 
-                    프로다운 성능과 역량</span>을 뿜어내죠.
+            
+            <div style="text-align:center;">
+                <div style="display:flex; justify-content: space-around; align-items: center; width:980px; height:740px; background-image: url(https://www.apple.com/v/macbook-air/s/images/overview/design/sizes/design_sizes_endframe__ckfqlo8f44eq_large.jpg);">
+                    <div style="text-align:left;">
+                        <h1 style="font-size:72px">34.5cm</h1>
+                        <h1 style="font-size:28px">디스플레이</h1>
+                    </div>
+                    <div style="text-align:left;">
+                        <h1 style="font-size:72px">38.9cm</h1>
+                        <h1 style="font-size:28px">디스플레이</h1>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <p style="width:980px;" align="left">
+                        <span style="font-size: 21px;"><b>완벽한 휴대성을 자랑하는 두 가지 사이즈.</span> 
+                        <span style="font-size: 21px; color:#8b8b8b;"><b> 13 모델이 그야말로 궁극의 휴대성을 자랑하는 노트북이라면, 15 모델은 멀티태스킹도 문제없는 널찍한 화면과 탁월한 휴대성이 어우러진 노트북입니다.</span>
                     </p>
                 </div>
-                <div style="display:flex; justify-content:center;">
-                    <div style="text-align:left;">
-                        <img style="padding: 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/mx__7nkrkdxhdzma_large.jpg" />
-                        <h1 style="color:#43b9b9; padding: 50px 60px;  ">8코어 <br>CPU</h1>
-                        <h1 style="color:#43b9b9; padding: 50px 60px; ">10코어 <br>GPU</h1>
-                        <h1 style="color:#43b9b9; padding: 50px 60px; ">최대 24GB<br>통합 메모리</h1>
-                    </div>
-                    <div style= "text-align:left;">
-                        <img style="padding: 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/mx_pro__4183istr5f6u_large.jpg" />
-                        <h1 style="color: #2997ff; padding: 50px 60px; ">12코어 <br>CPU</h1>
-                        <h1 style="color: #2997ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
-                        <h1 style="color: #2997ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
-                    </div>
-                    <div style= "text-align:left;">
-                        <img style="padding: 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/mx_max__fbgblbhbf6ai_large.jpg" />
-                        <h1 style="color:#a972ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
-                        <h1 style="color:#a972ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
-                        <h1 style="color:#a972ff; padding: 50px 60px; ">8코어 <br>CPU</h1>
-                    </div>
-                </div>
             </div>
-            <div style="background-color: #161617; text-align: center;">
-                <br><br><br><br><br><br><br><br><br>
-                <nobr><h1 style="font-size:80px; color: #f5f5f7; margin-left: ;">자신에게 맞는 MacBook Pro는?</h1></nobr>
-                <br><br>
-                <div style="display:flex; justify-content:center;">
-                    <div style="text-align:left;">
-                        <h1 style="color:#f5f5f7; padding: 0px 60px;  ">MacBook Pro 14</h1><br>
-                        <h1 style="color:#78787d; padding: 0px 60px;">M3칩</h1>
-                        <img style="padding: 0px 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/model_mbp_14_m3__dyengvhazxme_medium.jpg" />
-                        <div style="margin-left: 50px; width: 170px; display:flex; justify-content: space-between">
-                            <h4 style="color:#77777c;">스페이스 그레이 </h4> 
-                            <h4 style="color:#77777c;">실버</h4>
-                        </div>
-                        <img style="padding: 50px 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/icon_mx__ge809jnkz7e6_medium.png" />
-                        <h1 style="color:#77777c; padding: 50px 60px;  ">외장 디스플레이 <br>1대 지원</h1>
-                        <h1 style="color:#77777c; padding: 50px 60px; ">배터리 사용 시간<br>최대 22시간</h1></h1>
-                    </div>
-                    <div style= "text-align:left;">
-                    <h1 style="color:#f5f5f7; padding: 0px 60px;  ">MacBook Pro 14</h1><br>
-                        <h1 style="color:#78787d; padding: 0px 60px;">M3 Pro 또는 M3 Max칩</h1>
-                        <img style="padding: 0px 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/model_mbp_14_m3_pro_max__0ffc9mzs70i6_medium.jpg" />
-                        <div style="margin-left: 50px; width: 170px; display:flex; justify-content: space-between">
-                            <h4 style="color:#77777c;">스페이스 블랙 </h4> 
-                            <h4 style="color:#77777c;">실버</h4>
-                        </div>
-                        <img style="padding: 50px 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/icon_mx_pro_max__c2k8mrjv4k66_medium.png" />
-                        <h1 style="color:#77777c; padding: 50px 60px;  ">외장 디스플레이 <br>최대 2대 도는 4대 지원</h1>
-                        <h1 style="color:#77777c; padding: 50px 60px; ">배터리 사용 시간<br>최대 18시간</h1></h1>
-                    </div>
-                    <div style= "text-align:left;">
-                    <h1 style="color:#f5f5f7; padding: 0px 60px;  ">MacBook Pro 16</h1><br>
-                        <h1 style="color:#78787d; padding: 0px 60px;">M3 Pro 또는 M3 Max칩</h1>
-                        <img style="padding: 0px 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/model_mbp_14_m3_pro_max__0ffc9mzs70i6_medium.jpg" />
-                        <div style="margin-left: 50px; width: 170px; display:flex; justify-content: space-between">
-                            <h4 style="color:#77777c;">스페이스 블랙 </h4> 
-                            <h4 style="color:#77777c;">실버</h4>
-                        </div>
-                        <img style="padding: 50px 50px;"src="https://www.apple.com/v/macbook-pro/ak/images/overview/themes/performance/icon_mx_pro_max__c2k8mrjv4k66_medium.png" />
-                        <h1 style="color:#77777c; padding: 50px 60px; ">외장 디스플레이 <br>최대 2대 도는 4대 지원</h1>
-                        <h1 style="color:#77777c; padding: 50px 60px; ">배터리 사용 시간<br>최대 22시간</h1></h1>
-                    </div>
-                </div>
-                <a href="" style=" padding: 0px 50px; background-color: #0071e3; padding: 11px 41px; border-radius: 20px; text-decoration: none; color: white;">구입하기</a>
+            <div style="text-align:center;">
+                <img src="https://www.apple.com/kr/macbook-air/s/images/overview/performance/performance_hero_endframe__brqjd2udp1yq_large.jpg">
+            </div>
+            <div style="text-align:center;">
+                <a href="" style=" padding: 50px 50px; background-color: #0071e3; padding: 11px 41px; border-radius: 20px; text-decoration: none; color: white;">구입하기</a>
+           </div>
         `;
         mainCollectionUl.append(newLi);
     });

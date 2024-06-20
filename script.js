@@ -1,15 +1,15 @@
 //Data SET : 소스 코드 잘 몰라도 결과창 띄워놓고 비교하면서 수정 (백업필)
 const dbData = {
     logo : '<i class="fab fa-apple"></i>',  //로고 Fontawesome 홈페이지에 가서 원하는 로고 고르고 소스 복붙.
-    mainLink : './index.html', //로고 클릭시 링크
+    mainLink : 'index.html', //로고 클릭시 링크
     mainMenu :{
         name : '쇼핑 및 알아보기',  //메뉴 이름 : 홈페이지 하단의 세부 메뉴 타이틀
         list : [
             {name : 'Mac', link : '/Mac.html'},         //메뉴 이름, 링크
-            {name : 'iPad', link : '#'},        //메뉴 이름, 링크
-            {name : 'iPhone', link : '#'},      //메뉴 이름, 링크
-            {name : 'Watch', link : '#'},       //메뉴 이름, 링크
-            {name : 'Music', link : '#'},       //메뉴 이름, 링크
+            {name : 'iPad', link : '/iPad.html'},        //메뉴 이름, 링크
+            {name : 'iPhone', link : '/iPhone.html'},      //메뉴 이름, 링크
+            {name : 'Watch', link : 'Watch.html'},       //메뉴 이름, 링크
+            {name : 'AirPads', link : '/AirPad.html'},        //메뉴 이름, 링크
         ]
     },
     searchLink : '#',   //돋보기 모양 클릭시 링크
@@ -20,7 +20,7 @@ const dbData = {
         name : 'iPhone 15 Pro',
         info : '도약의 시간.',
         text : '1,550,000원부터 (보상 판매 미적용)',
-        pageLink : './MacMookPro.html',
+        pageLink : 'MacMookPro.html',
         orderLink : '#',
         fontColor : '#ffffff', 
         linkColor : '#517cd1',
@@ -30,7 +30,7 @@ const dbData = {
             name : 'MacBook Pro',                             //상품 제목
             info : '비교 불가 성능  시선 강탈 매력',                    //상품 설명
             text : '2,390,000원부터 (보상 판매 미적용)',       //가격 등의 상세정보
-            pageLink : 'js/script.js',                                 //상품 페이지 이동 링크주소
+            pageLink : 'MacBookPro.html',                                 //상품 페이지 이동 링크주소
             orderLink : '#',                                //구입 페이지 이동 링크주소
             fontColor : '#ffffff',                          //제목, 텍스트 폰트 색상
             linkColor : '#517cd1',                          //더알아보기 구입하기 링크 폰트 색상
@@ -38,8 +38,8 @@ const dbData = {
         },
         
         {
-            name : 'iPad Air',
-            info : '강력하다. 다채롭다. 경이롭다.',
+            name : 'iPad Pro',
+            info : '불가능이란 얇다.',
             text : '1,499,000원부터',
             pageLink : '#',
             orderLink : '#',
