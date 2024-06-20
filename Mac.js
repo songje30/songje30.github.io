@@ -1,7 +1,7 @@
 //Data SET : 소스 코드 잘 몰라도 결과창 띄워놓고 비교하면서 수정 (백업필)
 const dbData = {
     logo : '<i class="fab fa-apple"></i>',  //로고 Fontawesome 홈페이지에 가서 원하는 로고 고르고 소스 복붙.
-    mainLink : 'index.html', //로고 클릭시 링크
+    mainLink : 'https://songje30.github.io/', //로고 클릭시 링크
     mainMenu :{
         name : '쇼핑 및 알아보기',  //메뉴 이름 : 홈페이지 하단의 세부 메뉴 타이틀
         list : [
@@ -9,7 +9,7 @@ const dbData = {
             {name : 'iPad', link : '/iPad.html'},        //메뉴 이름, 링크
             {name : 'iPhone', link : '/iPhone.html'},      //메뉴 이름, 링크
             {name : 'Watch', link : 'Watch.html'},       //메뉴 이름, 링크
-            {name : 'AirPads', link : '/AirPad.html'},         //메뉴 이름, 링크
+            {name : 'AirPads', link : '/AirPad.html'},        //메뉴 이름, 링크
         ]
         
     },
