@@ -267,22 +267,11 @@ function showLogin(){
 
 
 function showStampPage(name){
-
     loginPage.style.display="none";
-
     stampPage.style.display="block";
 
-
-    userName.innerHTML =
-        name + "님";
-
-
-    if(typeof loadStampBook === "function"){
-
-        loadStampBook();
-
-    }
-
+    userName.innerHTML = name + "님";
+    loadStampBook();
 }
 
 
@@ -304,17 +293,20 @@ async function loadStampBook() {
     
 
 
-    if (!phone) return;
+    if (!phone){
+        showLogin();
+
+        return;
+    }
+
+    const params =
+    new URLSearchParams(window.location.search);
 
 
+    const qrStamp =
+        params.get("stamp");
 
-    // QR 스탬프 확인
-    const params = new URLSearchParams(
-        window.location.search
-    );
-
-
-    const qrStamp = params.get("stamp");
+    alert("QR:"+qrStamp);
 
 
 
