@@ -93,14 +93,15 @@ function checkLogined() {
         // 1시간
 
 
-        if(Date.now() - loginTime > limitTime){
+        if(Date.now() - Number(loginTime) > limitTime){
 
             localStorage.clear();
 
             showLogin();
 
-        }
+            return;
 
+        }
 
 
         showStampPage(savedName);
@@ -123,73 +124,138 @@ function checkLogined() {
 // 로그인
 async function login() {
 
-    const name = nameInput.value.trim();
-    const phone = phoneInput.value.trim();
+    try {
 
-    loginMessage.innerHTML = "";
+        const name = nameInput.value.trim();
 
-
-
-    if (name == "" || phone == "") {
-
-        loginMessage.innerHTML = "이름과 전화번호를 입력하세요.";
-
-        return;
-
-    }
+        const phone = phoneInput.value
+            .replace(/[^0-9]/g, "")
+            .trim();
 
 
-
-    const userRef = ref(db, "users/" + phone);
-
-    const snapshot = await get(userRef);
+        loginMessage.innerHTML = "";
 
 
-
-    // 신규 사용자
-    if (!snapshot.exists()) {
-
-        await set(userRef, {
-
-            name: name,
-
-            stamps: {}
-
-        });
-
-    }
-
-    // 기존 사용자
-    else {
-
-        const user = snapshot.val();
-
-        if (user.name != name) {
+        // 입력 확인
+        if (name === "" || phone === "") {
 
             loginMessage.innerHTML =
-                "이름 또는 전화번호가 올바르지 않습니다.";
+                "이름과 전화번호를 입력하세요.";
 
             return;
 
         }
 
+
+
+        // 전화번호 길이 확인
+        if (phone.length < 10 || phone.length > 11) {
+
+            loginMessage.innerHTML =
+                "전화번호 형식이 올바르지 않습니다.";
+
+            return;
+
+        }
+
+
+
+        const userRef =
+            ref(db, "users/" + phone);
+
+
+
+        const snapshot =
+            await get(userRef);
+
+
+
+        // 신규 사용자
+        if (!snapshot.exists()) {
+
+
+            await set(userRef, {
+
+                name: name,
+
+                stamps: {}
+
+            });
+
+
+        }
+
+
+        // 기존 사용자
+        else {
+
+
+            const user =
+                snapshot.val();
+
+
+
+            if (user.name !== name) {
+
+
+                loginMessage.innerHTML =
+                    "이름 또는 전화번호가 올바르지 않습니다.";
+
+
+                return;
+
+            }
+
+
+        }
+
+
+
+
+        // 로그인 정보 저장
+        localStorage.setItem(
+            "phone",
+            phone
+        );
+
+
+        localStorage.setItem(
+            "name",
+            name
+        );
+
+
+
+        // 로그인 시간 저장
+        localStorage.setItem(
+            "loginTime",
+            Date.now()
+        );
+
+
+
+        // 스탬프 화면 이동
+        showStampPage(name);
+
+
+
     }
 
+    catch(error) {
 
 
-    // 로그인정보 저장
-localStorage.setItem("phone", phone);
-localStorage.setItem("name", name);
+        console.error(
+            "로그인 오류:",
+            error
+        );
 
 
-// 로그인 시간 저장
-localStorage.setItem(
-    "loginTime",
-    Date.now()
-);
+        loginMessage.innerHTML =
+            "로그인 중 오류가 발생했습니다.";
 
+    }
 
-
+}
 
 function showLogin(){
 
@@ -223,12 +289,6 @@ function showStampPage(name){
 // ===============================
 // 스탬프 기능
 // ===============================
-
-
-import {
-    update
-} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-database.js";
-
 
 
 // 스탬프 개수
