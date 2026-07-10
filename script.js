@@ -288,6 +288,7 @@ const TOTAL_STAMP = 4;
 // 스탬프 화면 생성
 async function loadStampBook() {
 
+    let newStampId = null;
 
     const phone = localStorage.getItem("phone");
     
@@ -343,6 +344,9 @@ async function loadStampBook() {
                     true
                 );
 
+                newStampId = id;
+
+
 
             }
 
@@ -372,7 +376,6 @@ async function loadStampBook() {
         stampDataRef
     );
 
-
     let stamps = {};
 
 
@@ -385,7 +388,7 @@ async function loadStampBook() {
 
 
 
-    renderStampBook(stamps);
+    renderStampBook(stamps, newStampId);
 
 
 }
@@ -394,7 +397,7 @@ async function loadStampBook() {
 
 
 // 스탬프 화면 출력
-function renderStampBook(stamps) {
+function renderStampBook(stamps, newStampId=null) {
 
 
     const stampBook =
@@ -438,7 +441,8 @@ function renderStampBook(stamps) {
         stampBook.innerHTML += `
 
             <div class="stamp 
-                ${checked ? "checked" : ""}">
+                ${checked ? "checked" : ""}
+                ${id === newStampId ? "newStamp" : ""}">
 
                 ${
                     checked

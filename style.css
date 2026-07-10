@@ -78,7 +78,6 @@ h1 {
     margin-bottom: 15px;
 
     border:
-
         1px solid #ddd;
 
     border-radius: 10px;
@@ -107,7 +106,7 @@ h1 {
 
     font-weight: bold;
 
-    cursor: pointer;
+    cursor:pointer;
 
 }
 
@@ -215,6 +214,8 @@ h1 {
 
 
 
+
+
 /* ================= */
 /* 스탬프 */
 /* ================= */
@@ -276,6 +277,119 @@ h1 {
     border-radius:50%;
 
 }
+
+
+
+/* ================= */
+/* 새 스탬프 등장 효과 */
+/* ================= */
+
+
+.newStamp {
+
+    animation:
+        stampBounce 0.8s ease;
+
+}
+
+
+
+.newStamp .stampImage {
+
+    animation:
+        stampPop 0.6s ease;
+
+}
+
+
+
+
+
+/* 도장 찍히는 느낌 */
+
+@keyframes stampBounce {
+
+
+    0% {
+
+        transform:
+            scale(0)
+            rotate(-30deg);
+
+        opacity:0;
+
+    }
+
+
+    50% {
+
+        transform:
+            scale(1.25)
+            rotate(10deg);
+
+        opacity:1;
+
+    }
+
+
+    75% {
+
+        transform:
+            scale(0.9)
+            rotate(-5deg);
+
+    }
+
+
+    100% {
+
+        transform:
+            scale(1)
+            rotate(0);
+
+    }
+
+}
+
+
+
+
+
+/* 도장 이미지 확대 등장 */
+
+@keyframes stampPop {
+
+
+    0% {
+
+        transform:
+            scale(2);
+
+        opacity:0;
+
+    }
+
+
+    70% {
+
+        transform:
+            scale(0.9);
+
+    }
+
+
+    100% {
+
+        transform:
+            scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+
 
 
 
@@ -356,3 +470,4 @@ h1 {
 
 
 }
+
