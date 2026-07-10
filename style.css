@@ -1,63 +1,358 @@
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    margin:0;
-    padding:20px;
-    background:#f3f3f3;
-    font-family:"Noto Sans KR", Arial, sans-serif;
+
+body {
+
+    margin: 0;
+    padding: 20px;
+
+    font-family:
+        "Noto Sans KR",
+        Arial,
+        sans-serif;
+
+    background: #f3f3f3;
+
+    color: #333;
+
 }
 
-h1{
+
+
+/* 제목 */
+
+h1 {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+
+}
+
+
+
+/* ================= */
+/* 로그인 화면 */
+/* ================= */
+
+
+.loginBox {
+
+    max-width: 400px;
+
+    margin: 50px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+.loginBox h2 {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.loginBox input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 15px;
+
+    border:
+
+        1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+}
+
+
+
+.loginBox button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ff5252;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+
+.loginBox button:hover {
+
+    background:#e84343;
+
+}
+
+
+
+#loginMessage {
+
     text-align:center;
-    margin-bottom:20px;
+
+    color:red;
+
+    margin-top:15px;
+
 }
 
-#progress{
-    background:white;
-    border-radius:15px;
-    padding:15px;
-    text-align:center;
-    font-size:20px;
-    font-weight:bold;
-    margin-bottom:20px;
-    box-shadow:0 3px 8px #ddd;
-}
 
-#stampBook{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
 
-.stamp{
-    height:100px;
-    background:white;
-    border-radius:20px;
+/* ================= */
+/* 사용자 정보 */
+/* ================= */
+
+
+#userBar {
+
     display:flex;
-    justify-content:center;
+
+    justify-content:space-between;
+
     align-items:center;
-    gap:10px;
-    font-size:18px;
-    box-shadow:0 3px 8px #ddd;
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
 }
 
-.stamp input{
-    width:25px;
-    height:25px;
+
+
+#userName {
+
+    margin:0;
+
 }
 
-.stamp.checked{
-    background:#ff5252;
+
+
+#logoutBtn {
+
+    border:none;
+
+    background:#555;
+
     color:white;
+
+    padding:10px 15px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
 }
 
+
+
+
+
+/* ================= */
+/* 진행률 */
+/* ================= */
+
+
+#progress {
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+    box-shadow:
+
+        0 3px 8px #ddd;
+
+}
+
+
+
+/* ================= */
+/* 스탬프 */
+/* ================= */
+
+
+#stampBook {
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+
+
+.stamp {
+
+    height:150px;
+
+    background:white;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+
+        0 3px 8px #ddd;
+
+    overflow:hidden;
+
+}
+
+
+
+.stamp.checked {
+
+    background:#fff0f0;
+
+}
+
+
+
+.stampImage {
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+
+
+.emptyStamp {
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#eee;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#aaa;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+/* 모바일 */
 
 @media(max-width:400px){
 
-    #stampBook{
-        grid-template-columns:1fr;
+
+    body {
+
+        padding:15px;
+
     }
+
+
+    #stampBook {
+
+        grid-template-columns:
+
+            repeat(2,1fr);
+
+        gap:10px;
+
+    }
+
+
+
+    .stamp {
+
+        height:120px;
+
+    }
+
+
+
+    .stampImage {
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+
+    h1 {
+
+        font-size:24px;
+
+    }
+
 
 }

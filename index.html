@@ -1,159 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스탬프 투어</title>
 
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>스탬프 투어</title>
-
-
-<style>
-
-*{
-    box-sizing:border-box;
-}
-
-
-body{
-
-    margin:0;
-    padding:20px;
-
-    font-family:
-    Arial,
-    sans-serif;
-
-    background:#f4f4f4;
-
-}
-
-
-
-h1{
-
-    text-align:center;
-
-}
-
-
-
-#progress{
-
-    background:white;
-
-    padding:15px;
-
-    border-radius:15px;
-
-    text-align:center;
-
-    font-size:20px;
-
-    margin-bottom:20px;
-
-    font-weight:bold;
-
-}
-
-
-
-#stampBook{
-
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    gap:15px;
-
-
-}
-
-
-
-.stamp{
-
-    background:white;
-
-    height:150px;
-
-    border-radius:20px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    box-shadow:0 3px 8px #ddd;
-
-    overflow:hidden;
-
-}
-
-
-.stamp.checked{
-
-    background:#fff3f3;
-
-}
-
-
-.stampImage{
-    width:130px;
-    height:130px;
-    object-fit:cover;
-    border-radius:50%;
-}
-
-
-.emptyStamp{
-
-    color:#bbb;
-
-}
-
-
-</style>
-
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
-
-
 <body>
 
+    <!-- 로그인 화면 -->
+    <div id="loginPage">
+
+        <h1>🎖 스탬프 투어</h1>
+
+        <div class="loginBox">
+
+            <h2>참가자 로그인</h2>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="이름"
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="전화번호 (01012345678)"
+            >
+
+            <button id="loginBtn">
+                로그인
+            </button>
+
+            <p id="loginMessage"></p>
+
+        </div>
+
+    </div>
 
 
-<h1>
-🎖 스탬프북
-</h1>
+    <!-- 스탬프북 화면 -->
+    <div id="stampPage" style="display:none;">
 
+        <h1>🎖 스탬프북</h1>
 
+        <div id="userBar">
 
-<div id="progress">
+            <h3 id="userName"></h3>
 
-</div>
+            <button id="logoutBtn">
+                로그아웃
+            </button>
 
+        </div>
 
+        <div id="progress">
+            획득 스탬프 : 0 / 4
+        </div>
 
-<div id="stampBook">
+        <div id="stampBook">
+            <!-- JavaScript에서 생성 -->
+        </div>
 
+    </div>
 
-</div>
-
-
-
-
-
-<script src="script.js"></script>
-
-
+    <script type="module" src="script.js"></script>
 
 </body>
-
 </html>
