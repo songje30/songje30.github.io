@@ -32,12 +32,10 @@ const nameInput = document.getElementById("name");
 const phoneInput = document.getElementById("phone");
 
 const loginBtn = document.getElementById("loginBtn");
-const loginMessage = document.getElementById("loginMessage");
-
-const userName = document.getElementById("userName");
 const logoutBtn = document.getElementById("logoutBtn");
 
-
+const userName = document.getElementById("userName");
+const loginMessage = document.getElementById("loginMessage");
 
 
 // 로그인 여부 확인
@@ -54,45 +52,71 @@ loginBtn.addEventListener("click", login);
 
 
 // 로그아웃
-logoutBtn.addEventListener("click", () => {
+logoutBtn.addEventListener(
+"click",
+()=>{
 
     sessionStorage.clear();
 
-    loginPage.style.display = "block";
-    stampPage.style.display = "none";
-
-    nameInput.value = "";
-    phoneInput.value = "";
+    showLogin();
 
 });
 
 
 
-
-// 세션 확인
+// 세션 체크
 function checkSession() {
 
-    const phone = sessionStorage.getItem("phone");
-    const name = sessionStorage.getItem("name");
+    const savedPhone = sessionStorage.getItem("phone");
+    const savedName = sessionStorage.getItem("name");
+    const loginTime = sessionStorage.getItem("loginTime");
 
 
-    console.log("저장된 세션:", phone, name);
-
+    console.log(
+        "세션 확인:",
+        savedPhone,
+        savedName,
+        loginTime
+    );
 
 
     if (
-        phone !== null &&
-        name !== null
+        savedPhone &&
+        savedName &&
+        loginTime
     ) {
 
-        showStampPage(name);
+
+        // 자동 로그아웃 시간 체크
+        const now = Date.now();
+
+        const limitTime = 1000 * 60 * 60; 
+        // 1시간
+
+
+        if (now - Number(loginTime) > limitTime) {
+
+
+            sessionStorage.clear();
+
+            showLogin();
+
+
+            return;
+
+        }
+
+
+
+        showStampPage(savedName);
+
 
     } 
     
     else {
 
-        loginPage.style.display = "block";
-        stampPage.style.display = "none";
+
+        showLogin();
 
     }
 
@@ -159,8 +183,15 @@ async function login() {
 
 
     // 세션 저장
-    sessionStorage.setItem("phone", phone);
-    sessionStorage.setItem("name", name);
+sessionStorage.setItem("phone", phone);
+sessionStorage.setItem("name", name);
+
+
+// 로그인 시간 저장
+sessionStorage.setItem(
+    "loginTime",
+    Date.now()
+);
 
     showStampPage(name);
 
@@ -169,19 +200,27 @@ async function login() {
 
 
 
-// 스탬프 화면
-function showStampPage(name) {
+function showLogin(){
 
-    loginPage.style.display = "none";
+    loginPage.style.display="block";
 
-    stampPage.style.display = "block";
+    stampPage.style.display="none";
 
-    userName.innerHTML = name + "님";
-
+}
 
 
-    // 2편에서 호출
-    if (typeof loadStampBook === "function") {
+function showStampPage(name){
+
+    loginPage.style.display="none";
+
+    stampPage.style.display="block";
+
+
+    userName.innerHTML =
+        name + "님";
+
+
+    if(typeof loadStampBook === "function"){
 
         loadStampBook();
 
