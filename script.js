@@ -146,20 +146,6 @@ async function login() {
 
         }
 
-
-
-        // 전화번호 길이 확인
-        if (phone.length < 10 || phone.length > 11) {
-
-            loginMessage.innerHTML =
-                "전화번호 형식이 올바르지 않습니다.";
-
-            return;
-
-        }
-
-
-
         const userRef =
             ref(db, "users/" + phone);
 
