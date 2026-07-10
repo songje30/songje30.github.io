@@ -51,12 +51,11 @@ loginBtn.addEventListener("click", login);
 
 
 
-// 로그아웃
 logoutBtn.addEventListener(
 "click",
 ()=>{
 
-    sessionStorage.clear();
+    localStorage.clear();
 
     showLogin();
 
@@ -67,9 +66,9 @@ logoutBtn.addEventListener(
 // 세션 체크
 function checkSession() {
 
-    const savedPhone = sessionStorage.getItem("phone");
-    const savedName = sessionStorage.getItem("name");
-    const loginTime = sessionStorage.getItem("loginTime");
+    const savedPhone = localStorage.getItem("phone");
+    const savedName = localStorage.getItem("name");
+    const loginTime = localStorage.getItem("loginTime");
 
 
     console.log(
@@ -94,15 +93,11 @@ function checkSession() {
         // 1시간
 
 
-        if (now - Number(loginTime) > limitTime) {
+        if(Date.now() - loginTime > limitTime){
 
-
-            sessionStorage.clear();
+            localStorage.clear();
 
             showLogin();
-
-
-            return;
 
         }
 
@@ -188,14 +183,10 @@ sessionStorage.setItem("name", name);
 
 
 // 로그인 시간 저장
-sessionStorage.setItem(
+localStorage.setItem(
     "loginTime",
     Date.now()
 );
-
-    showStampPage(name);
-
-}
 
 
 
@@ -249,7 +240,8 @@ const TOTAL_STAMP = 4;
 async function loadStampBook() {
 
 
-    const phone = sessionStorage.getItem("phone");
+    const phone = localStorage.getItem("phone");
+    
 
 
     if (!phone) return;
