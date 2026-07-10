@@ -40,7 +40,7 @@ const loginMessage = document.getElementById("loginMessage");
 
 // 로그인 여부 확인
 window.addEventListener("DOMContentLoaded", () => {
-    checkSession();
+    checkLogined();
 });
 
 
@@ -63,8 +63,8 @@ logoutBtn.addEventListener(
 
 
 
-// 세션 체크
-function checkSession() {
+// 로그인 기록 체크
+function checkLogined() {
 
     const savedPhone = localStorage.getItem("phone");
     const savedName = localStorage.getItem("name");
@@ -177,9 +177,9 @@ async function login() {
 
 
 
-    // 세션 저장
-sessionStorage.setItem("phone", phone);
-sessionStorage.setItem("name", name);
+    // 로그인정보 저장
+localStorage.setItem("phone", phone);
+localStorage.setItem("name", name);
 
 
 // 로그인 시간 저장
