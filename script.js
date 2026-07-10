@@ -41,8 +41,9 @@ const logoutBtn = document.getElementById("logoutBtn");
 
 
 // 로그인 여부 확인
-checkSession();
-
+window.addEventListener("DOMContentLoaded", () => {
+    checkSession();
+});
 
 
 
@@ -74,11 +75,21 @@ function checkSession() {
     const phone = sessionStorage.getItem("phone");
     const name = sessionStorage.getItem("name");
 
-    if (phone && name) {
+
+    console.log("저장된 세션:", phone, name);
+
+
+
+    if (
+        phone !== null &&
+        name !== null
+    ) {
 
         showStampPage(name);
 
-    } else {
+    } 
+    
+    else {
 
         loginPage.style.display = "block";
         stampPage.style.display = "none";
